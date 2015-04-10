@@ -5,12 +5,12 @@ title: Ruby Tutorial
 <div>
     <h1>Ruby Tutorial</h1>
     <div>
-        <div id="intro">
+        <div id="intro" class="section">
             <h2>Introduction</h2>
             <h3>What is Ruby?</h3>
-            <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including funcitonal, object oriented, and imperative. Futhermore, Ruby is dynamically typed and employs an automatic memeory management system. </p>
+            <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including functional, object-oriented, and imperative. Furthermore, Ruby is dynamically typed and employs an automatic memory management system. </p>
         </div>
-        <div id="getting_started">
+        <div id="getting_started" class="section">
             <h2>Getting Started</h2>
             <h3>Installation</h3>
             <p>
@@ -37,7 +37,8 @@ $ ruby -v # confirm it works</code></pre>
                 </li>
             </o1>
         </div>
-        <div id="strings">
+
+        <div id="strings" class="section">
             <h2>Strings, Numbers, Classes, and Objects</h2>
             <h3>Ruby Input</h3>
             <p>
@@ -56,9 +57,11 @@ puts("Hey #{name}!")
                 Let's take a look at the last line of our code:
                 <pre><code>puts("Hey #{name}!")</code></pre>
                 The variable is being called inside the <i>puts</i> statement by placing it between two curly brackets preceded with a hash mark, #{}. This only works with strings delimited by double quotes; if you were to use single quotes, then the <i>puts</i> statement would display exactly as read 'Hey #{name}!'.
-                <p>Ruby can also recognize nonprinting characters such as tabs '\t' and newlines '\n'. You can even evaluate small expressions within the embedded evaluations. For example, you can output mathematical expressions with the following line of code:
+                <p>Ruby can also recognize nonprinting characters such as tabs '\t' and newlines '\n' and perform simple concatenation with use of the '+' operator. You can even evaluate small expressions within the embedded evaluations. For example, you can output mathematical expressions with the following line of code:
                 <pre><code>puts("2 + 2 is equal to #{ 2 + 2 }")</code></pre>
                 As you would guess, this would output the string, "2 + 2 is equal to 4".
+                <pre><code>puts("#{"hello" + " sir"}")</code></pre>
+                The above line of code would ouput "hello sir".
                 </p>
             </p>
             <h3>Numbers</h3>
@@ -151,7 +154,10 @@ end</code></pre>
                     <pre><code>personA = Person.new("Cole",21)</code></pre>
                     This will automatically assign the parameters to the instance variables @namePerson and @agePerson. You can think of this as constructor method similar to Java. 
                 </p>
-            </p>
+            </p</p></p></div>
+
+
+            <div id="superclasses" class="section">
             <h2>Superclasses and Subclasses</h2>
             <p>
                 Here is an example of a class called Dog that is a subclass of the class Animal:
@@ -190,15 +196,58 @@ end</code></pre>
             <p>
                 Now, what if I told you there is an even easier way to make these get and set accessors in your method definitons? Well, there is an easier way using attr_reader, attr_writer, and attr_accessor. The attr_reader does the same thing as our previous example with <i>def age</i>, and attr_writer dos the same with <i>def age=(newAge)</i> method. The attr_accessor is essentially combining the two into one statement, so you get both the attr_reader and attr_writer. This is how it would be used for our class Person example above:
                 <pre><code>class Person
-    attr_reader :agePerson # get accessor for instance variable agePerson
-    attr_writer :agePerson # set accessor for instance variable agePerson
+    # get accessor for instance variable agePerson
+    attr_reader :agePerson
+    # set accessor for instance variable agePerson
+    attr_writer :agePerson
 
-    attr_accessor :agePerson # get and set accessor for agePerson
-                The string following the colon is a <i>symbol</i>. Calling attr_reader and attr_writer with a symbol has the effect of creating a get/set accessor (here named agePerson) for an instance variable (@agePerson) with a name matching the symbol (:agePerson).
+    # get and set accessor for agePerson
+    attr_accessor :agePerson 
 end</code></pre>
+                The string following the colon is a <i>symbol</i>. Calling attr_reader and attr_writer with a symbol has the effect of creating a get/set accessor (here named agePerson) for an instance variable (@agePerson) with a name matching the symbol (:agePerson).
+            </p>
+        </div>
+
+        <div id="arrays" class="section">
+            <h2>Arrays</h2>
+            <p>
+                In Java, arrays can only contain one specific data type in its range. However, in Ruby, they can carry any type. Arrays can even contain function calls! They are simply called as follows:
+                <pre><code>a0 = [1,2,3,4,5]
+a1 = [1,"two",3.0,a0.length]</code></pre>
+                As in Java, you can also index these arrays in Ruby like this:
+                <pre><code>puts(a1[2]) # output: "3.0"</code></pre>
+            </p>
+            <p>
+                You can quicky iterate over an array like this using a for..in loop:
+                <pre><code>for i in a1
+    puts(i)
+end</code></pre>
+                This would output the entire contents of the array.
             </p>
 
-        <div id="arguments">
+            <p>
+                Be careful though! In Ruby, arrays are reference types too just like Java! This means, if you set one array equal to another, changing the values of either array will reflect changes on the other. If you want to copy arrays, use the <i>clone</i> method.
+                <pre><code>arr1 = arr3.clone #now arr1 is a copy of arr3</code></pre>
+            </p>
+
+            <h2>Hashes</h2>
+            <p>
+                In Ruby, hashes perform the same way as in Java. This is how you create a new hash:
+                <pre><code>h1 = Hash.new
+h2 = Hash.new("Some object")</code></pre>
+                Both hash objects created are empty, but they both have default values--that is, a value that is returned when no specific value is found at a given index. In this example, h2 is initialized with the default value of "Some object". h1 is not initialized with a value, so the default is <i>nil</i>.
+            </p>
+            <p>
+                Having created a Hash object, you can add items just as you would for arrays. For example,
+                <pre><code>h1['first'] = "One"
+h1['two'] = "two"
+h1['three'] = "three"</code></pre>
+                The key called in a Hash can be any type of object. If you want to copy Hashes, just use <i>clone</i>, just as you would for arrays.
+            </p>
+
+        </div>
+
+        <div id="arguments" class="section">
             <h2>Passing Arguments and Returning Values</h2>
             <h3>Returning Values</h3>
             <p>
@@ -218,7 +267,141 @@ end</code></pre>
     c = a + b
     return b   # returns 2
 end</code></pre>
-            <p></p>
+            <p>Let's look at some special cases below:</p>
+            <pre><code>def method3
+   "hello"     # returns "hello"
+end
+
+def method4
+   a = 1 + 2
+   "goodbye"   # returns "goodbye"
+end
+
+def method5
+end            # returns nil
+
+def ret_things
+    greeting = "Hello world"
+    a = 1
+    b = 2.0
+    return a, b, 3, "four", greeting, 6 * 10
+end</code></pre>
+            <p>As seen in <code>method3</code> and <code>method4</code>, assignments don't have to take place in order for a method to return a value. In <code>method5</code>, if the method body is empty, it will return <code>nil</code>. Finally, the method <code>ret_things</code> shows us that we can return multiple values! The return values are placed in an array in the same order that you've listed them.</p>
+            <h3>Assignment and Parameter Passing</h3>
+            <p>By now, I am sure that you are familiar with the terms <i>pass-by-value</i> and <i>pass-by-reference</i> with regard to parameter passing. In traditional terminology, Ruby is strictly pass-by-value; however, Ruby doesn't really have a pure, non-reference value. Instead, since variables are always references to objects, the object that is passed in is simply duplicated as another independent object. For example, in the code below, the object id of <code>num</code> will be different before and after the call to <code>change</code> is made.</p>
+            <pre><code>def change( x )
+    x += 1
+    return x
+end
+
+...
+
+num = 10
+puts( "num.object_id=#{num.object_id}" )
+num = change( num )
+puts( "num.object_id=#{num.object_id}" )</code></pre>
+            <p>Of course, there is always an exception to the rule and in this case, it's with integers (or Fixnums). Every instance of a specific integer or every variable that is assigned that specific integer will have the same object id.</p>
+            <h3>Modifying Receivers and Yielding New Objects</h3>
+            <p>In Ruby, most methods do not change the value of the receiver ojbect and instead return a new object. In the example below, calling <code>reverse</code> doesn't change the value or object id of <code>str1</code>. Simply, a new object is returned and we can assign a variable to <code>str1.reverse</code> if we wish to retain the value returned.</p>
+            <pre><code>str1 = "hello"
+str1.reverse</code></pre>
+            <p>If we want to directly modify the reciever, then we can use the <code>!</code> character as shown below. This time, calling <code>reverse!</code> on <code>str1</code> changes the value of <code>str1</code> to "olleh". However, note that a new object is not created and <code>str1</code> retains the same object id as before.</p>
+            <pre><code>str1 = "hello"
+str1.reverse!</code></pre>
+            <h3>Parallel Assignment</h3>
+            <p>Another handy feature of Ruby is the ability for parallel assignments. As we learned earlier, methods can return multiple values so it might help if we could assign those values to variables in a single line. The examples below illustrate this idea in practice.</p>
+            <pre><code>s1, s2, s3 = "Hickory", "Dickory", "Dock"        #=> s1="Hickory", s2="Dickory", s3="Dock"
+
+def returnArray( a, b, c )
+    a = "Hello, " + a
+    b = "Hi, " + b
+    c = "Good day, " + c
+    return a, b, c
+end
+
+x, y, z = returnArray( "Fred", "Bert", "Mary" )
+
+# x = "Hello, Fred"
+# y = "Hi, Bert"
+# z = "Good day, Mary"</code></pre>
+            <p>That's not it though! Parallel assignments also gives us the ability to swap the values of variables without creating a temporary variable.</p>
+            <pre><code>i1 = 1
+i2 = 2
+
+i1, i2 = i2, i1        #=> i1 is now 2, i2 is 1</code></pre>
+        </div>
+        <div id="exceptions" class="section">
+            <h2>Exception Handling</h2>
+            <pre><code>begin
+   # Some code which may cause an exception
+rescue (Exception Class)
+   # Code to recover from the exception
+end</code></pre>
+            <p>The general structure for handling exceptions in Ruby is shown above. However, in many cases, this will return an unfriendly error message. As such, we often want to write our own error messages so that we can know what exceptions are occurring. The code below shows an attempt at handling a divide by zero error and the corresponding output. Here we are using the "assoc operator" (<code>=></code>) to assign the exception to the variable <code>exc</code>. Calling <code>class</code> on the exception gives us the class of the exception.</p>
+            <pre><code>begin
+   x = 1/0
+rescue Exception => exc
+   x = 0
+   puts(exc.class)
+   puts(exc)
+end
+puts(x)
+
+# When this runs, the code following rescue Exception executes and displays this:
+ZeroDivisionError
+divided by 0
+0</code></pre>
+        </div>
+        <div id="blocks" class="section">
+            <h2>Blocks</h2>
+            <p>A block in Ruby is simply a chunk of code that is enclosed in brackets ({ }) and can be invoked using the <code>yield</code> statement. We can also pass in parameters using the bar characters (| |). An example of this is shown below:</p>
+            <pre><code>def test
+   yield 5
+   puts "You are in the method test"
+   yield 100
+end
+
+test {|i| puts "You are in the block #{i}"}</code></pre>
+            <p>The code above produces the following result:</p>
+            <pre><code>You are in the block 5
+You are in the method test
+You are in the block 100</code></pre>
+            <p>As you can see, the <code>yield</code> statement invokes the <code>test</code> block and passes in the integer next to it as <code>i</code> inside of the block. A handy and common application of blocks is with arrays. For example, as shown below, you can iterate over an array and perform an operation on each of its elements and return the results in a new array.</p>
+            <pre><code>b3 = [1,2,3].collect{|x| x*2}
+
+# b3 = [2,4,6]</code></pre>
+        </div>
+        <div id="modules" class="section">
+            <h2>Modules and Mixins</h2>
+            <h3>Modules</h3>
+            <pre><code>module MyModule
+    GOODMOOD = "happy"
+    BADMOOD = "grumpy"
+
+    def greet
+        return "I'm #{GOODMOOD}. How are you?"
+    end
+
+    def MyModule.greet
+        return "I'm #{BADMOOD}. How are you?"
+    end
+end</code></pre>
+            <p>Above, we have a sample module in Ruby. If you think this looks like a class then you're right because just like a class, a module can contain constants, methods, and classes. In fact, the Module class is the immediate ancestor of the Class class in Ruby. Essentially, a module is a "wrapper" around a set of methods, constants, and classes. Modules give us a <i>namespace</i> in which we can have methods and constants without worrying about name clashes. To access module constants we can simply use the scope resolution operator (::). To access a module method, we can simply use dot notation prefixed with the name of the module.</p>
+            <pre><code>MyModule.greet   #=> "I'm grumpy. How are you?"
+
+puts(MyModule::GOODMOOD)    #=> happy</code></pre>
+            <h3>Mixins</h3>
+            <p>To access the instance methods within a module, we have to <i>mix in</i> or include the module by using the <code>include</code> method, giving included modules the name mixins. This idea is seen below using the same module from before. So now by including <code>MyModule</code>, the instance method <code>greet</code> suddenly pops into scope and we can call it like any other method.</p>
+            <pre><code>include MyModule
+
+...
+
+puts( greet )            #=> I'm happy. How are you?
+puts( MyModule.greet )   #=> I'm grumpy. How are you?</code></pre>
+        </div>
+        <div id="files" class="section">
+            <h2>Files and IO</h2>
+
         </div>
     </div>
 </div>
