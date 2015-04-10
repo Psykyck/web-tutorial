@@ -46,7 +46,9 @@ $ ruby -v # confirm it works</code></pre>
 name = gets()
 puts("Hey #{name}!")
 </code></pre>
-                If you were to give it "Andy", then it would ouput: "Hey Andy!". Notice that I've used two methods of output. The first was using <i>print()</i> and the second was <i>puts()</i>. The <i>print</i> method will print the statement contained in parenthesis' without attaching a new line at the end. On the other hand, the <i>puts</i> method will append a new line. This is similar to Java with the <i>print</i> and <i>println</i> statement.
+                If you were to give it "Andy", then it would ouput: "Hey Andy!". Notice that I've used two methods of output. The first was using <i>print()</i> and the second was <i>puts()</i>. The <i>print</i> method will print the statement contained in parentheses without attaching a new line at the end. On the other hand, the <i>puts</i> method will append a new line. Parentheses are optional! You could do the same with using <i>print ""</i> or <i>puts ""</i> as long as you place your string within the quotes.
+            </p>
+            <p>This is similar to Java with the <i>print</i> and <i>println</i> statements.
                 In addition, notice that the variable is not predeclared or been specified a type before being assigned to the return value of <i>gets</i>. You may create them whenever you please, and Ruby will handle the work of inferring the types of the variables you create.
             </p>
             <h3>Strings and Embedded Evaluation</h3>
@@ -54,6 +56,146 @@ puts("Hey #{name}!")
                 Let's take a look at the last line of our code:
                 <pre><code>puts("Hey #{name}!")</code></pre>
                 The variable is being called inside the <i>puts</i> statement by placing it between two curly brackets preceded with a hash mark, #{}. This only works with strings delimited by double quotes; if you were to use single quotes, then the <i>puts</i> statement would display exactly as read 'Hey #{name}!'.
+                <p>Ruby can also recognize nonprinting characters such as tabs '\t' and newlines '\n'. You can even evaluate small expressions within the embedded evaluations. For example, you can output mathematical expressions with the following line of code:
+                <pre><code>puts("2 + 2 is equal to #{ 2 + 2 }")</code></pre>
+                As you would guess, this would output the string, "2 + 2 is equal to 4".
+                </p>
+            </p>
+            <h3>Numbers</h3>
+            <p>
+                If you think strings are easy with Ruby, then you'll be happy to hear numbers are even easier. Again, you don't have to worry about typing variables such as doubles and ints in Java. Ruby does the work of typing your variables based on the evaluation of the assignment. Here is some simple code to evaluating the number of points you've earned from a percentage of the total:
+                <pre><code>prints("Please enter the total points of the assignment: ")
+total = gets()
+puts("Please enter the percentage you earned as a decimal: ")
+percent = gets().to_f
+earned = percent * total
+puts("#{percent} percent of the total points #{total} will earn you #{earned} points!")</code></pre>
+                Using the string.to_f method, Ruby automatically converts the string to a floating point if it is of valid form. Therefore, the percent becomes a floating point instead of a string. If it's not of valid format, then it returns 0.0 instead.
+            </p>
+            <h3>Comments</h3>
+            <p>
+                You can make comments in Ruby using the hash tag mark '#'. Here is an example of a single line comment:
+                <pre><code># This is a comment!
+puts("Hello")</code></pre>
+                If you want to do multi-line comments, then you place a =begin at the start and a =end at the end. Note that both these tags must be flush with the left margin!
+                <pre><code>=begin
+This is a
+multiline
+comment!
+=end</code></pre>
+            </p>
+            <h3>Testing Conditions with if..then</h3>
+            <p>
+                The if..then statement is similar to if-else in Java except parentheses are again optional as well as the keyword <i>then</i>. Here is an example of code checking for input greater than zero:
+                <pre><code>print "Give me a number greater than zero: "
+input = gets
+if input <= 0 then
+    print "Input is invalid!"
+end</code></pre>
+                The keyword 'end' is not optional! You must end every if..then statement with 'end'. Code will not run without it!
+            </p>
+            <h3>Local, Class, and Global Variables</h3>
+            <p>
+                In Ruby, local variables are any variables that begin with a lowercase character. These variables only exist within a specific part or scope of the program. Class variables are prepended with a '@@' before the name. These exist across all instances of the class. Finally, the global variables begin with a dollar sign, '$' followed by a given name. These exist across the entirety of the program.
+                <pre><code>localvar = "hello"
+$globalvar = "goodbye"
+
+def method1
+    localvar = 2015
+    puts(localvar)
+    puts($globalvar)
+end
+
+def method2
+    localvar = 1994
+    $globalvar = "adios"
+    puts(localvar)
+    puts($globalvar)
+end
+</code></pre>
+                In method1, the puts(localvar) will ouput 2015 instead of "hello". The puts($globalvar) will still output "goodbye". However in method2, puts(localvar) will output 1994 as expected, and puts($globalvar) will output "adios". Local and global scope work in Ruby as expected in Java.
+            </p>
+            <h3>Classes and Objects</h3>
+            <p>
+                Here is an example of a class in Ruby:
+                <pre><code>class Dog
+    def set_name(name)
+        @dogName = name
+    end
+
+    def get_name
+        return @dogName
+    end
+end</code></pre>
+                Notice that the class definition begins with the keyword <i>class</i> all lowercase followed by the name of the class itself beginning with an uppercase letter. The class contains a method called <i>set_name</i> followed by a passed parameter called <i>name</i>. The body of the method will assign the value of name to the instance variable @dogName.
+                <h4>Instance Variables</h4>
+                <p>
+                    Variables that begin with the '@' sign are instance variables. These variables are initially private, so you must define methods to return these instance variables. You can make an instance of this 'Dog' class using the new method. For example, you can create two dogs called Fred and Harry:
+                    <pre><code>fred = Dog.new
+harry = Dog.new</code></pre>
+                    These dogs have no name, so you can call the <i>set_name</i> method like this!
+                    <pre><code>fred.set_name('Fred')
+harry.set_name('Harry')</code></pre>
+                    If you want to retrieve the dog's name, you call the Dog.get_name method.
+                    <pre><code>puts(fred.get_name)
+puts(harry.get_name)</code></pre>
+                    As expected, this will output 'Fred' followed by a new line and 'Harry'.
+                    A nifty thing you can do to initialize these instance variables is use the initialize method predefined by Ruby! This is easier and less code to use than having seperate set methods.
+                    <pre><code>def Person
+    def initialize(name, age)
+        @namePerson = name
+        @agePerson = age
+    end
+end</code></pre>
+                    When you call the <i>new</i> method on instance creation of the class, it will automatically make use of the initialize method. So, in order to make an instance of the class 'Person', you will call:
+                    <pre><code>personA = Person.new("Cole",21)</code></pre>
+                    This will automatically assign the parameters to the instance variables @namePerson and @agePerson. You can think of this as constructor method similar to Java. 
+                </p>
+            </p>
+            <h2>Superclasses and Subclasses</h2>
+            <p>
+                Here is an example of a class called Dog that is a subclass of the class Animal:
+                <pre><code>class Dog < Animal
+    def initialize(aName, age, legs)
+        super(aName, age)
+        @numLegs = legs
+    end
+end</code></pre>
+                The left angle bracket '<' indicates the inheritence step. This means the class Dog will inherit all methods and data variables of the class Animal. When a new Dog object is created, its initialize method is automatically called. If you want some or all the parameters passed to the initialize method of the inherited class, you call <i>super</i> followed by a specific list of parameters. If you want to pass all of them, just call super alone!
+                When <i>super</i> is used inside a method, the keyword calls a method with the same name as the current method in the ancestor or superclass. 
+            </p>
+            <h3>Accessor Methods</h3>
+            <p>
+                It would be easier to call instance variables of your objects like this:
+                <pre><code>puts(personA.age)</code></pre>
+                instead of this:
+                <pre><code>puts(personA.get_age)</code></pre>
+                To do this, you need to modify the accessor methods for @namePerson.
+                <pre><code>class Person
+    def age
+        return @agePerson
+    end
+
+    def age=(newAge)
+        @agePerson = newAge
+    end
+end</code></pre>
+                Here, the get accessor is called name, and the set accessor is called name=(newAge). Now, you can assign new values for this instance variable as follows:
+                <pre><code>personA.age = 54</code></pre>
+                And you can retrieve the value like this:
+                <pre><code>puts(personA.age)</code></pre>
+                Note: the equal sign in the set accessor is strictly positioned as so. Therefore, name = (newAge) will not work as opposed to name=(newAge).
+            </p>
+            <h3>Attribute Readers and Writers</h3>
+            <p>
+                Now, what if I told you there is an even easier way to make these get and set accessors in your method definitons? Well, there is an easier way using attr_reader, attr_writer, and attr_accessor. The attr_reader does the same thing as our previous example with <i>def age</i>, and attr_writer dos the same with <i>def age=(newAge)</i> method. The attr_accessor is essentially combining the two into one statement, so you get both the attr_reader and attr_writer. This is how it would be used for our class Person example above:
+                <pre><code>class Person
+    attr_reader :agePerson # get accessor for instance variable agePerson
+    attr_writer :agePerson # set accessor for instance variable agePerson
+
+    attr_accessor :agePerson # get and set accessor for agePerson
+                The string following the colon is a <i>symbol</i>. Calling attr_reader and attr_writer with a symbol has the effect of creating a get/set accessor (here named agePerson) for an instance variable (@agePerson) with a name matching the symbol (:agePerson).
+end</code></pre>
             </p>
 
         <div id="arguments">
