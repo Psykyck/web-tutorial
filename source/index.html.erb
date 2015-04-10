@@ -142,5 +142,24 @@ ZeroDivisionError
 divided by 0
 0</code></pre>
         </div>
+        <div id="blocks" class="section">
+            <h2>Blocks</h2>
+            <p>A block in Ruby is simply a chunk of code that is enclosed in brackets ({ }) and can be invoked using the <code>yield</code> statement. We can also pass in parameters using the bar characters (| |). An example of this is shown below:</p>
+            <pre><code>def test
+   yield 5
+   puts "You are in the method test"
+   yield 100
+end
+
+test {|i| puts "You are in the block #{i}"}</code></pre>
+            <p>The code above produces the following result:</p>
+            <pre><code>You are in the block 5
+You are in the method test
+You are in the block 100</code></pre>
+            <p>As you can see, the <code>yield</code> statement invokes the <code>test</code> block and passes in the integer next to it as <code>i</code> inside of the block. A handy and common application of blocks is with arrays. For example, as shown below, you can iterate over an array and perform an operation on each of its elements and return the results in a new array.</p>
+            <pre><code>b3 = [1,2,3].collect{|x| x*2}
+
+# b3 = [2,4,6]</code></pre>
+        </div>
     </div>
 </div>
