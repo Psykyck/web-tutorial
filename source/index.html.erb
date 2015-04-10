@@ -60,7 +60,7 @@ puts("Hey #{name}!")
             <h2>Passing Arguments and Returning Values</h2>
             <h3>Returning Values</h3>
             <p>
-                Unlike many other languages, Ruby methods <i>always</i> return a value. If no return value is specified, then a Ruby method will return the result of the last expression evaluated in the method.
+                Unlike many other languages, Ruby methods <i>always</i> return a value. If no return value is specified, then a Ruby method will return the result of the last expression evaluated in the method.                                 For example, in the code below, the method would return <code>k</code> with a value of 0.
             </p>
             <pre><code>def test
     i = 100
@@ -68,7 +68,7 @@ puts("Hey #{name}!")
     k = 0
 end</code></pre>
             <p>
-                For example, in the code above, the method would return <code>k</code> with a value of 0. Of course, if you want to return a different value, you can specify that with the <code>return</code> keyword as shown below:
+                Of course, if you want to return a different value, you can specify that with the <code>return</code> keyword as shown below. So here, in <code>method2</code>, instead of returning 3, or <code>a+b</code>, the method will return <code>b</code>'s value of 2 because it is explicitly stated.
             </p>
             <pre><code>def method2
     a = 1
@@ -76,6 +76,7 @@ end</code></pre>
     c = a + b
     return b   # returns 2
 end</code></pre>
+            <p></p>
         </div>
     </div>
 </div>
