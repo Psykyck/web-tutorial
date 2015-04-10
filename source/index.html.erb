@@ -13,34 +13,41 @@ title: Ruby Tutorial
         <div id="getting_started">
             <h2>Getting Started</h2>
             <h3>Installation</h3>
-            <p>Before we start with the Ruby installation I'm going to assume that you are running Unbuntu or some other Linux distribution, either natively or in a virtual machine. If not, please make sure that you are before proceeding with the Ruby installation. Secondly, make sure that your distribution is up to date before proceeding.</p>
+            <p>
+                Before we start with the Ruby installation I'm going to assume that you are running Unbuntu or some other Linux distribution, either natively or in a virtual machine. If not, please make sure that you are                       before proceeding with the Ruby installation. Secondly, make sure that your distribution is up to date before proceeding.
+            </p>
             <o1>
-                <li>Install rbenv and ruby-build.<br/>
-                    <p class="code">
-                        $ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv<br/>
-                        $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc<br/>
-                        $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc<br/><br/>
+                <li>Install rbenv and ruby-build.
+                    <p class="code">$ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-                        $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build<br/>
-                        $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc<br/>
-                        $ exec $SHELL
-                    </p>
+$ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+$ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+$ exec $SHELL</p>
                 </li>
-                <li>Install Ruby<br/>
-                    <p class="code">
-                        # first install some Ruby dependencies<br/>
-                        $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev<br/>
-                        libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev<br/><br/>
+                <li>Install Ruby
+                    <p class="code"># first install some Ruby dependencies
+$ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev
+libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
-                        $ rbenv install 2.1.2<br/>
-                        $ rbenv global 2.1.2  # set default ruby version<br/>
-                        $ ruby -v # confirm it works
-                    </p>
+$ rbenv install 2.1.2
+$ rbenv global 2.1.2  # set default ruby version
+$ ruby -v # confirm it works</p>
                 </li>
             </o1>
         </div>
         <div id="arguments">
             <h2>Passing Arguments and Returning Values</h2>
+            <h3>Returning Values</h3>
+            <p>
+                Unlike many other languages, Ruby methods <i>always</i> return a value. If no return value is specified, then a Ruby method will return the result of the last expression evaluated in the method.
+            </p>
+            <p class="code">def test
+    i = 100
+    j = 10
+    k = 0
+end</p>
 
         </div>
     </div>
