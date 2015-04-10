@@ -5,12 +5,12 @@ title: Ruby Tutorial
 <div>
     <h1>Ruby Tutorial</h1>
     <div>
-        <div id="intro">
+        <div id="intro" class="section">
             <h2>Introduction</h2>
             <h3>What is Ruby?</h3>
             <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including functional, object-oriented, and imperative. Furthermore, Ruby is dynamically typed and employs an automatic memory management system. </p>
         </div>
-        <div id="getting_started">
+        <div id="getting_started" class="section">
             <h2>Getting Started</h2>
             <h3>Installation</h3>
             <p>
@@ -37,7 +37,7 @@ $ ruby -v # confirm it works</code></pre>
                 </li>
             </o1>
         </div>
-        <div id="arguments">
+        <div id="arguments" class="section">
             <h2>Passing Arguments and Returning Values</h2>
             <h3>Returning Values</h3>
             <p>
@@ -114,11 +114,14 @@ x, y, z = returnArray( "Fred", "Bert", "Mary" )
 # x = "Hello, Fred"
 # y = "Hi, Bert"
 # z = "Good day, Mary"</code></pre>
-            <p>That's not it though! Parallel assignments also gives us the ability to swap the values of variables.</p>
+            <p>That's not it though! Parallel assignments also gives us the ability to swap the values of variables without creating a temporary variable.</p>
             <pre><code>i1 = 1
 i2 = 2
 
 i1, i2 = i2, i1        #=> i1 is now 2, i2 is 1</code></pre>
+        </div>
+        <div id="exceptions" class="section">
+            <h2>Exception Handling</h2>
         </div>
     </div>
 </div>
