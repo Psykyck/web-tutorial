@@ -17,7 +17,7 @@ title: Ruby Tutorial
                 Before we start with the Ruby installation I'm going to assume that you are running Unbuntu or some other Linux distribution, either natively or in a virtual machine. If not, please make sure that you are                       before proceeding with the Ruby installation. Secondly, make sure that your distribution is up to date before proceeding.
             </p>
             <o1>
-                <li>Install rbenv and ruby-build.
+                <li>Install rbenv and ruby-build by running the following commands in the terminal:
                     <p class="code">$ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
@@ -26,7 +26,7 @@ $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 $ exec $SHELL</p>
                 </li>
-                <li>Install Ruby
+                <li>Next, install Ruby with the following commands in the terminal:
                     <p class="code"># first install some Ruby dependencies
 $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev
 libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
@@ -48,7 +48,15 @@ $ ruby -v # confirm it works</p>
     j = 10
     k = 0
 end</p>
-
+            <p>
+                For example, in the code above, the method would return <code>k</code> with a value of 0. Of course, if you want to return a different value, you can specify that with the <code>return</code> keyword as shown below:
+            </p>
+            <p class="code">def method2
+    a = 1
+    b = 2
+    c = a + b
+    return b   # returns 2
+end</p>
         </div>
     </div>
 </div>
