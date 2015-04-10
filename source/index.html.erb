@@ -5,36 +5,39 @@ title: Ruby Tutorial
 <div>
     <h1>Ruby Tutorial</h1>
     <div>
-        <h2>Introduction</h2>
-        <h3>What is Ruby?</h3>
-        <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including funcitonal, object oriented, and imperative. Futhermore, Ruby is dynamically typed and employs an automatic memeory management system. </p>
+        <div id="intro">
+            <h2>Introduction</h2>
+            <h3>What is Ruby?</h3>
+            <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including funcitonal, object oriented, and imperative. Futhermore, Ruby is dynamically typed and employs an automatic memeory management system. </p>
+        </div>
+        <div id="getting_started">
+            <h2>Getting Started</h2>
+            <h3>Installation</h3>
+            <p>Before we start with the Ruby installation I'm going to assume that you are running Unbuntu or some other Linux distribution, either natively or in a virtual machine. If not, please make sure that you are before proceeding with the Ruby installation. Secondly, make sure that your distribution is up to date before proceeding.</p>
+            <o1>
+                <li>Install rbenv and ruby-build.<br/>
+                    <code>
+                        $ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+                        $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+                        $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-        <h2>Getting Started</h2>
-        <h3>Installation</h3>
-        <p>Before we start with the Ruby installation I'm going to assume that you are running Unbuntu or some other Linux distribution, either natively or in a virtual machine. If not, please make sure that you are before proceeding with the Ruby installation. Secondly, make sure that your distribution is up to date before proceeding.</p>
-        <o1>
-            <li>Install rbenv and ruby-build.<br/>
-                <code>
-                    $ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-                    $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-                    $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-                    
-                    $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-                    $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-                    $ exec $SHELL
-                </code>
-            </li>
-            <li>Install Ruby<br/>
-                <code>
-                    # first install some Ruby dependencies
-                    $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev 
+                        $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+                        $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+                        $ exec $SHELL
+                    </code>
+                </li>
+                <li>Install Ruby<br/>
+                    <code>
+                        # first install some Ruby dependencies
+                        $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev
                         libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
-                    
-                    $ rbenv install 2.1.2 
-                    $ rbenv global 2.1.2  # set default ruby version
-                    $ ruby -v # confirm it works
-                </code>
-            </li>
-        </o1>
+
+                        $ rbenv install 2.1.2
+                        $ rbenv global 2.1.2  # set default ruby version
+                        $ ruby -v # confirm it works
+                    </code>
+                </li>
+            </o1>
+        </div>
     </div>
 </div>
