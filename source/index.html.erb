@@ -130,7 +130,28 @@ end
         return @dogName
     end
 end</code></pre>
-                Notice that the class definition begins with the keyword <i>class</i> all lowercase followed by the name of the class itself beginning with an uppercase letter. The class contains a method called <i>set_name</i> followed by a passed parameter called <i>name</i>. The body of the method will assign the value of name to the instance variable @dogName.
+                Notice that the class definition begins with the keyword <i>class</i> all lowercase followed by the name of the class itself beginning with an uppercase letter. The class contains a method called <i>set_name</i> followed by a passed parameter called <i>name</i>. The body of the method will assign the value of name to the instance variable @dogName. Class methods are defined with "class name".classMethodName. Also, methods in the class can have different accessibilities: public, protected, and private. So, for example:
+                <pre><code>class MyClass
+                
+    def MyClass.exampleMethod
+        puts "This is an example of a class method"
+    end
+
+    private
+        def priv
+            puts("Private")
+        end
+
+    protected
+        def prot
+            puts("Protected")
+        end
+
+    public
+        def pub
+            puts("Public")
+        end
+end</code></pre>
                 <h4>Instance Variables</h4>
                 <p>
                     Variables that begin with the '@' sign are instance variables. These variables are initially private, so you must define methods to return these instance variables. You can make an instance of this 'Dog' class using the new method. For example, you can create two dogs called Fred and Harry:
@@ -245,6 +266,84 @@ h1['three'] = "three"</code></pre>
                 The key called in a Hash can be any type of object. If you want to copy Hashes, just use <i>clone</i>, just as you would for arrays.
             </p>
 
+        </div>
+        <div id="loops" class="section">
+            <h2>Loops</h2>
+            <p>
+                Ruby has some nifty ways of looping through collections or performing iterations. One such way is the <i>while</i> statement:
+                <pre><code>while i < 5 do
+    puts(i)
+    i+=1
+end</code></pre>
+                This loops performs the same as in Java, except the parentheses are optional in the condition, and it must be preceded with the keyword <i>do</i>, a newline, backslash \, or a semicolon;.
+                Also, the <i>while</i> can also act as a modifier as follows:
+                <pre><code>begin
+    puts(i)
+    i+=1
+end while i < 5</code></pre>
+            </p>
+            <p>
+                Ruby also has an <i>until</i> statement. It will continue executing the code body until the conditional is false. It's backward of the while statement.
+                <pre><code>until 5 > i do
+    puts(i)
+    i-=1
+end</code></pre>
+            </p>
+            <p>
+                Ruby is infamous for this specific loop called the <i>.each</i> loop. Let's say you have an array you want to iterator over and print out its contents.
+                <pre><code>a1 = [1,2,3,4,5]
+
+a1.each do |x|
+    puts "Value of local variable 'x' is #{x}"
+end</code></pre>
+                What this does is it iterates over the array and assigns the current index's contents into the local variable you specify. In this case, we named the variable 'x', and so we call this variable's value in order to access the values of the index.
+            </p>
+            <p>In all these different loops, Ruby supports using the <i>break</i> statement! It works the same way as in Java.</p>
+            <pre><code>for i in 0..5
+    if i > 2 then
+        break
+    end
+    puts "Value of local variable is #{i}"
+end</code></pre>
+            <p>Output would stop after printing out "Value of local variable is 2"</p>
+        </div>
+
+        <div id="conditionals" class="section">
+        <h2>Conditional Statements</h2>
+        <h3>if..then..else</h3>
+        <p>
+            I've already introduced the if..then statement. The else statement works the same way as the if-else in Java. In the example below, this demonstrates an if..then..else statement in Ruby:
+            <pre><code>if 1 > 0 then
+    puts "1 is greater than 0"
+else
+    puts "1 is not greater than 0"
+end</code></pre>
+            If you want to bridge together more else statements, you use the keyword <i>elsif</i> instead of else. You can also leave out the <i>then</i> keywords if its more convenient for you.
+            <pre><code>x = 1
+if x > 2
+    puts "x is greater than 2"
+elsif x <= 2 && x != 0
+    puts "x is 1"
+else
+    puts "I can't guess the number"
+end</code></pre>
+            Another cool thing is you can replace the logical && symbols with the keyword <i>and</i>. Same thing with <i>or</i> and <i>not</i>.
+            <pre><code>elsif x <= 2 and x != 0</code></pre>
+        </p>
+        <p>
+            A switch-case statement has a different syntax than in Java, but it performs the same functionality. It is coded as follows:
+            <pre><code>print "Enter your grade: "
+grade = gets.chomp
+case grade
+when"A", "B"
+    puts 'You pretty smart!'
+when "C", "D"
+    puts 'You not so smart!'
+else
+    puts 'Invalid choice or F'
+end</code></pre>
+            In Ruby, switch-case statements let you supply multiple values to a when statement rather than just one. Basically, it can act as a multi condition and stop repetitive use of code.
+        </p>
         </div>
 
         <div id="arguments" class="section">
