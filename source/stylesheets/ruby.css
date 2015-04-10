@@ -3,11 +3,8 @@
     margin: auto;
 }
 
-.code {
-    white-space: pre;
+pre {
     padding: 10px;
     margin: 20px;
-    font-family: monospace;
     font-size: 14px;
-    background-color: antiquewhite;
 }

@@ -18,22 +18,22 @@ title: Ruby Tutorial
             </p>
             <o1>
                 <li>Install rbenv and ruby-build by running the following commands in the terminal:
-                    <p class="code">$ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+                    <pre><code>$ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-$ exec $SHELL</p>
+$ exec $SHELL</code></pre>
                 </li>
                 <li>Next, install Ruby with the following commands in the terminal:
-                    <p class="code"># first install some Ruby dependencies
+                    <pre><code># first install some Ruby dependencies
 $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev
 libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
 $ rbenv install 2.1.2
 $ rbenv global 2.1.2  # set default ruby version
-$ ruby -v # confirm it works</p>
+$ ruby -v # confirm it works</code></pre>
                 </li>
             </o1>
         </div>
@@ -43,20 +43,20 @@ $ ruby -v # confirm it works</p>
             <p>
                 Unlike many other languages, Ruby methods <i>always</i> return a value. If no return value is specified, then a Ruby method will return the result of the last expression evaluated in the method.
             </p>
-            <p class="code">def test
+            <pre><code>def test
     i = 100
     j = 10
     k = 0
-end</p>
+end</code></pre>
             <p>
                 For example, in the code above, the method would return <code>k</code> with a value of 0. Of course, if you want to return a different value, you can specify that with the <code>return</code> keyword as shown below:
             </p>
-            <p class="code">def method2
+            <pre><code>def method2
     a = 1
     b = 2
     c = a + b
     return b   # returns 2
-end</p>
+end</code></pre>
         </div>
     </div>
 </div>
