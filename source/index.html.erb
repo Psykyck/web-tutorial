@@ -122,6 +122,25 @@ i1, i2 = i2, i1        #=> i1 is now 2, i2 is 1</code></pre>
         </div>
         <div id="exceptions" class="section">
             <h2>Exception Handling</h2>
+            <pre><code>begin
+   # Some code which may cause an exception
+rescue (Exception Class)
+   # Code to recover from the exception
+end</code></pre>
+            <p>The general structure for handling exceptions in Ruby is shown above. However, in many cases, this will return an unfriendly error message. As such, we often want to write our own error messages so that we can know what exceptions are occurring. The code below shows an attempt at handling a divide by zero error and the corresponding output. Here we are using the "assoc operator" (<code>=></code>) to assign the exception to the variable <code>exc</code>. Calling <code>class</code> on the exception gives us the class of the exception.</p>
+            <pre><code>begin
+   x = 1/0
+rescue Exception => exc
+   x = 0
+   puts(exc.class)
+   puts(exc)
+end
+puts(x)
+
+# When this runs, the code following rescue Exception executes and displays this:
+ZeroDivisionError
+divided by 0
+0</code></pre>
         </div>
     </div>
 </div>
