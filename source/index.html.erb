@@ -161,5 +161,37 @@ You are in the block 100</code></pre>
 
 # b3 = [2,4,6]</code></pre>
         </div>
+        <div id="modules" class="section">
+            <h2>Modules and Mixins</h2>
+            <h3>Modules</h3>
+            <pre><code>module MyModule
+    GOODMOOD = "happy"
+    BADMOOD = "grumpy"
+
+    def greet
+        return "I'm #{GOODMOOD}. How are you?"
+    end
+
+    def MyModule.greet
+        return "I'm #{BADMOOD}. How are you?"
+    end
+end</code></pre>
+            <p>Above, we have a sample module in Ruby. If you think this looks like a class then you're right because just like a class, a module can contain constants, methods, and classes. In fact, the Module class is the immediate ancestor of the Class class in Ruby. Essentially, a module is a "wrapper" around a set of methods, constants, and classes. Modules give us a <i>namespace</i> in which we can have methods and constants without worrying about name clashes. To access module constants we can simply use the scope resolution operator (::). To access a module method, we can simply use dot notation prefixed with the name of the module.</p>
+            <pre><code>MyModule.greet   #=> "I'm grumpy. How are you?"
+
+puts(MyModule::GOODMOOD)    #=> happy</code></pre>
+            <h3>Mixins</h3>
+            <p>To access the instance methods within a module, we have to <i>mix in</i> or include the module by using the <code>include</code> method, giving included modules the name mixins. This idea is seen below using the same module from before. So now by including <code>MyModule</code>, the instance method <code>greet</code> suddenly pops into scope and we can call it like any other method.</p>
+            <pre><code>include MyModule
+
+...
+
+puts( greet )            #=> I'm happy. How are you?
+puts( MyModule.greet )   #=> I'm grumpy. How are you?</code></pre>
+        </div>
+        <div id="files" class="section">
+            <h2>Files and IO</h2>
+
+        </div>
     </div>
 </div>
