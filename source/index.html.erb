@@ -92,12 +92,33 @@ num = change( num )
 puts( "num.object_id=#{num.object_id}" )</code></pre>
             <p>Of course, there is always an exception to the rule and in this case, it's with intergers (or Fixnums). Every instance of a specific integer or every variable that is assigned that specific integer will have the same object id.</p>
             <h3>Modifying Receivers and Yielding New Objects</h3>
-            <p>In Ruby, most methods do not change the value of the receiver ojbect and instead return a new object. In the example below, calling <code>reverse</code> doesn't change the value or object id of <code>str1</code>.</p>
+            <p>In Ruby, most methods do not change the value of the receiver ojbect and instead return a new object. In the example below, calling <code>reverse</code> doesn't change the value or object id of <code>str1</code>. Simply, a new object is returned and we can assign a variable to <code>str1.reverse</code> if we wish to retain the value returned.</p>
             <pre><code>str1 = "hello"
 str1.reverse</code></pre>
             <p>If we want to directly modify the reciever, then we can use the <code>!</code> character as shown below. This time, calling <code>reverse!</code> on <code>str1</code> changes the value of <code>str1</code> to "olleh". However, note that a new object is not created and <code>str1</code> retains the same object id as before.</p>
             <pre><code>str1 = "hello"
 str1.reverse!</code></pre>
+            <h3>Parallel Assignment</h3>
+            <p>Another handy feature of Ruby is the ability for parallel assignments. As we learned earlier, methods can return multiple values so it might help if we could assign those values to variables in a single line. The examples below illustrate this idea in practice.</p>
+            <pre><code>s1, s2, s3 = "Hickory", "Dickory", "Dock"        #=> s1="Hickory", s2="Dickory", s3="Dock"
+
+def returnArray( a, b, c )
+    a = "Hello, " + a
+    b = "Hi, " + b
+    c = "Good day, " + c
+    return a, b, c
+end
+
+x, y, z = returnArray( "Fred", "Bert", "Mary" )
+
+# x = "Hello, Fred"
+# y = "Hi, Bert"
+# z = "Good day, Mary"</code></pre>
+            <p>That's not it though! Parallel assignments also gives us the ability to swap the values of variables.</p>
+            <pre><code>i1 = 1
+i2 = 2
+
+i1, i2 = i2, i1        #=> i1 is now 2, i2 is 1</code></pre>
         </div>
     </div>
 </div>
