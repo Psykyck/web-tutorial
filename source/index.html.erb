@@ -37,6 +37,25 @@ $ ruby -v # confirm it works</code></pre>
                 </li>
             </o1>
         </div>
+        <div id="strings">
+            <h2>Strings, Numbers, Classes, and Objects</h2>
+            <h3>Ruby Input</h3>
+            <p>
+                Compared to Java, Ruby is easier in receiving input and outputting things. In Java, you would need to import java.util.Scanner and then create a Scanner object to receive input. With Ruby, there are no necessary imports or class methods to receive an input string. All you have to do is call the method <i>gets()</i>. Let's say you want to prompt the user for his/her name. Here is what the code would be:
+<pre><code>print('What is your name? ')
+name = gets()
+puts("Hey #{name}!")
+</code></pre>
+                If you were to give it "Andy", then it would ouput: "Hey Andy!". Notice that I've used two methods of output. The first was using <i>print()</i> and the second was <i>puts()</i>. The <i>print</i> method will print the statement contained in parenthesis' without attaching a new line at the end. On the other hand, the <i>puts</i> method will append a new line. This is similar to Java with the <i>print</i> and <i>println</i> statement.
+                In addition, notice that the variable is not predeclared or been specified a type before being assigned to the return value of <i>gets</i>. You may create them whenever you please, and Ruby will handle the work of inferring the types of the variables you create.
+            </p>
+            <h3>Strings and Embedded Evaluation</h3>
+            <p>
+                Let's take a look at the last line of our code:
+                <pre><code>puts("Hey #{name}!")</code></pre>
+                The variable is being called inside the <i>puts</i> statement by placing it between two curly brackets preceded with a hash mark, #{}. This only works with strings delimited by double quotes; if you were to use single quotes, then the <i>puts</i> statement would display exactly as read 'Hey #{name}!'.
+            </p>
+
         <div id="arguments">
             <h2>Passing Arguments and Returning Values</h2>
             <h3>Returning Values</h3>
