@@ -8,7 +8,7 @@ title: Ruby Tutorial
         <div id="intro">
             <h2>Introduction</h2>
             <h3>What is Ruby?</h3>
-            <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including funcitonal, object oriented, and imperative. Futhermore, Ruby is dynamically typed and employs an automatic memeory management system. </p>
+            <p>Ruby is "a dynamic, open sourced programming language with a focus on simplicity and productivity." Designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan, Ruby was influenced by Perl, Smaltalk, Eiffel, Ada, and Lisp. With a chief focus in flexibility, Ruby supports multiple programming paradigms, including functional, object-oriented, and imperative. Furthermore, Ruby is dynamically typed and employs an automatic memory management system. </p>
         </div>
         <div id="getting_started">
             <h2>Getting Started</h2>
@@ -57,7 +57,47 @@ end</code></pre>
     c = a + b
     return b   # returns 2
 end</code></pre>
-            <p></p>
+            <p>Let's look at some special cases below:</p>
+            <pre><code>def method3
+   "hello"     # returns "hello"
+end
+
+def method4
+   a = 1 + 2
+   "goodbye"   # returns "goodbye"
+end
+
+def method5
+end            # returns nil
+
+def ret_things
+    greeting = "Hello world"
+    a = 1
+    b = 2.0
+    return a, b, 3, "four", greeting, 6 * 10
+end</code></pre>
+            <p>As seen in <code>method3</code> and <code>method4</code>, assignments don't have to take place in order for a method to return a value. In <code>method5</code>, if the method body is empty, it will return <code>nil</code>. Finally, the method <code>ret_things</code> shows us that we can return multiple values! The return values are placed in an array in the same order that you've listed them.</p>
+            <h3>Assignment and Parameter Passing</h3>
+            <p>By now, I am sure that you are familiar with the terms <i>pass-by-value</i> and <i>pass-by-reference</i> with regard to parameter passing. In traditional terminology, Ruby is strictly pass-by-value; however, Ruby doesn't really have a pure, non-reference value. Instead, since variables are always references to objects, the object that is passed in is simply duplicated as another independent object. For example, in the code below, the object id of <code>num</code> will be different before and after the call to <code>change</code> is made.</p>
+            <pre><code>def change( x )
+    x += 1
+    return x
+end
+
+...
+
+num = 10
+puts( "num.object_id=#{num.object_id}" )
+num = change( num )
+puts( "num.object_id=#{num.object_id}" )</code></pre>
+            <p>Of course, there is always an exception to the rule and in this case, it's with intergers (or Fixnums). Every instance of a specific integer or every variable that is assigned that specific integer will have the same object id.</p>
+            <h3>Modifying Receivers and Yielding New Objects</h3>
+            <p>In Ruby, most methods do not change the value of the receiver ojbect and instead return a new object. In the example below, calling <code>reverse</code> doesn't change the value or object id of <code>str1</code>.</p>
+            <pre><code>str1 = "hello"
+str1.reverse</code></pre>
+            <p>If we want to directly modify the reciever, then we can use the <code>!</code> character as shown below. This time, calling <code>reverse!</code> on <code>str1</code> changes the value of <code>str1</code> to "olleh". However, note that a new object is not created and <code>str1</code> retains the same object id as before.</p>
+            <pre><code>str1 = "hello"
+str1.reverse!</code></pre>
         </div>
     </div>
 </div>
