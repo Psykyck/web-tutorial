@@ -500,7 +500,17 @@ puts( MyModule.greet )   #=> I'm grumpy. How are you?</code></pre>
         </div>
         <div id="files" class="section">
             <h2>Files and IO</h2>
+            <p>Like other programming languages, Ruby provides an IO class that allows you to open and close IO streams and red and write data to and from them. Ruby makes reading and writing to files almost effortless. Below, I show you two different ways you can read from a file line by line. As you can see, we simply only have to specify the file name as an argument to the <code>foreach</code> method of the <code>IO</code> class. We pass in a block that will print each line as it is read.</p>
+            <pre><code>IO.foreach("testfile.txt") {|line| print( line ) }
 
+lines = IO.readlines("testfile.txt")    # another way
+lines.each{|line| print( line )}</code></pre>
+            <p>To modify files, we must explicitly open and close the file we wish to modify. Here we will use the <code>File</code> class to create a pointer to the file as well as specifying the file mode. Below is an example where we open a file name "myfile.txt" for write-only, as specified by the "w", and insert six strings, each on a new line with <code>f.puts</code>. Finally, as always, we close the file after we are done modifying it to release the file pointer and flush any data from the memory to ensure that it is all saved into the file on the disk.</p>
+            <pre><code>f = File.new("myfile.txt", "w")
+f.puts( "I", "wandered", "lonely", "as", "a", "cloud" )
+f.close</code></pre>
+            <p>For your reference, I've included a table below that shows all of the different file modes that Ruby allows.</p>
+            <img src="images/fileio.png" alt="file mode" title="File Mode">
         </div>
     </div>
 </div>

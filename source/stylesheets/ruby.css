@@ -16,3 +16,7 @@ pre {
     border-radius: 10px;
     background-color: lightgray;
 }
+
+img {
+    margin: 20px 30px;
+}
