@@ -16,28 +16,32 @@ title: Ruby Tutorial
             <p>Before we start with the Ruby installation I'm going to assume that you are running Unbuntu or some other Linux distribution, either natively or in a virtual machine. If not, please make sure that you are before proceeding with the Ruby installation. Secondly, make sure that your distribution is up to date before proceeding.</p>
             <o1>
                 <li>Install rbenv and ruby-build.<br/>
-                    <code>
-                        $ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-                        $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-                        $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+                    <p class="code">
+                        $ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv<br/>
+                        $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc<br/>
+                        $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc<br/><br/>
 
-                        $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-                        $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+                        $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build<br/>
+                        $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc<br/>
                         $ exec $SHELL
-                    </code>
+                    </p>
                 </li>
                 <li>Install Ruby<br/>
-                    <code>
-                        # first install some Ruby dependencies
-                        $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev
-                        libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
+                    <p class="code">
+                        # first install some Ruby dependencies<br/>
+                        $ sudo apt-get install zlib1g-dev build-essential libssl-dev libreadline-dev<br/>
+                        libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev<br/><br/>
 
-                        $ rbenv install 2.1.2
-                        $ rbenv global 2.1.2  # set default ruby version
+                        $ rbenv install 2.1.2<br/>
+                        $ rbenv global 2.1.2  # set default ruby version<br/>
                         $ ruby -v # confirm it works
-                    </code>
+                    </p>
                 </li>
             </o1>
+        </div>
+        <div id="arguments">
+            <h2>Passing Arguments and Returning Values</h2>
+
         </div>
     </div>
 </div>
