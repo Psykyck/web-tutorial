@@ -1,728 +1,615 @@
+---
+title: JavaScript Tutorial
+---
+<h1>JavaScript Tutorial</h1>
 <div class="section">
-<h1 dir="ltr">
-    JavaScript Tutorial
-</h1><br />
-<p dir="ltr">
-    This tutorial is designed for those who are already familiar with the Java, HTML and CSS and who want to get started with using Javascript (JS) in their
-    web pages.
-</p>
-<p dir="ltr">
-    Though Java and Javascript are very different, they share some similarities. Throughout the tutorial, concepts that are similar to Java will be briefly
-    mentioned and other, not so familiar, concepts will be further explained.
-</p>
-<p dir="ltr">
-    By the end of this tutorial you will have enough understanding of Javascript to start writing your own scripts and have an idea of how to make your web
-    pages behave the way you would like them to.
-</p><br />
-<h1 dir="ltr">
+    <h2>Introduction</h2>
+    <p>
+        This tutorial is designed for those who are already familiar with the Java, HTML and CSS and who want to get started with using Javascript (JS) in their
+        web pages.
+    </p>
+    <p>
+        Though Java and Javascript are very different, they share some similarities. Throughout the tutorial, concepts that are similar to Java will be briefly
+        mentioned and other, not so familiar, concepts will be further explained.
+    </p>
+    <p>
+        By the end of this tutorial you will have enough understanding of Javascript to start writing your own scripts and have an idea of how to make your web
+        pages behave the way you would like them to.
+    </p>
+</div>
+
+<div class="section">
+<h2>
     Why learn JavaScript?
-</h1><br />
+</h2>
 <ul>
-    <li dir="ltr">
-	<p dir="ltr">
-            It is the most popular programming language in the world!
-	</p>
+    <li>
+       <p>
+        It is the most popular programming language in the world!
+        </p>
     </li>
-</ul>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <p>
             It is mostly used in combination with HTML and CSS to program the behavior of web pages, for example:
         </p>
     </li>
-</ul>
-<br/>
-<ol>
-    <li dir="ltr">
-    Javascript code inside of HTML.
-    
+    <li>
+        Javascript code inside of HTML.
+
     </li>
- <img
-        src="https://lh3.googleusercontent.com/4RMZaAmQOP7ZAAbAT76a1Nc_iZKSom3mVkoeDXirffPsMMLQ8cZwFnCZtn-9rYqLZtjKO9VcD7Mnib8l-vvXnoDi9i0j7-5tWRyFR8T_fpr830VwkizfcScpq3YjkfmewerfN8I"
-        width="280px;"
-        height="184px;"
+    <img
+    src="https://lh3.googleusercontent.com/4RMZaAmQOP7ZAAbAT76a1Nc_iZKSom3mVkoeDXirffPsMMLQ8cZwFnCZtn-9rYqLZtjKO9VcD7Mnib8l-vvXnoDi9i0j7-5tWRyFR8T_fpr830VwkizfcScpq3YjkfmewerfN8I"
+    width="280px;"
+    height="184px;"
     />
 
-<li dir="ltr">
-    Before clicking button.
-</li>
+    <li>
+        Before clicking button.
+    </li>
     <img
-        src="https://lh3.googleusercontent.com/0GPRuSLB53_Whg5TsGgFtwdYkBMSZAWYvn0cJ5IZ7kht0zGIKQMaSAenHZIlD1SND-SFT3q-HrOJQZ9aT32D7Vr9Khor3yCb2TOMQBFVT4M18l2SQJCEgZK09eqUadNDO1DJsLI"
-        width="241px;"
-        height="99px;"
+    src="https://lh3.googleusercontent.com/0GPRuSLB53_Whg5TsGgFtwdYkBMSZAWYvn0cJ5IZ7kht0zGIKQMaSAenHZIlD1SND-SFT3q-HrOJQZ9aT32D7Vr9Khor3yCb2TOMQBFVT4M18l2SQJCEgZK09eqUadNDO1DJsLI"
+    width="241px;"
+    height="99px;"
     />
-<li dir="ltr">
-    After clicking button.
-</li>
+    <li>
+        After clicking button.
+    </li>
     <img
-        src="https://lh4.googleusercontent.com/3szZ0lg4-NyS3syaYHMpD2AFZjc9oBuI35j2ZT_-_jQo8dDo5nBE8QPm1bgjQ8R4Ikc7vrpCLtHpIRDLui_PcK2g4MRYCmQSaY7_7LRtOmuWofvneP0YR8HJIixfEzyqZhEBgPc"
-        width="237px;"
-        height="104px;"
+    src="https://lh4.googleusercontent.com/3szZ0lg4-NyS3syaYHMpD2AFZjc9oBuI35j2ZT_-_jQo8dDo5nBE8QPm1bgjQ8R4Ikc7vrpCLtHpIRDLui_PcK2g4MRYCmQSaY7_7LRtOmuWofvneP0YR8HJIixfEzyqZhEBgPc"
+    width="237px;"
+    height="104px;"
     />
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            In fact, it is the default scripting language of HTML.
-        </p>
-    </li>
-</ul>
-</ol>
-</div>
-<div class="section">
-<h1 dir="ltr">
-    Before we continue, Java != JavaScript
-</h1><br />
-<p dir="ltr">
-    Since you are familiar with Java, this is worth mentioning. JavaScript was not designed to be a relative of Java. They just share a similar name. JS is
-    object oriented like Java and shares some similar concepts however, as you will see, there are some key differences that set them apart.
-</p><br />
-<h1 dir="ltr">
-    How to include in HTML
-</h1><br />
-<p dir="ltr">
-    Here are a few ways to include JavaScript in your HTML to begin using it:
-</p>
-<ol>
-    <li dir="ltr">
-        <p dir="ltr">
-            Explicit
-        </p>
-    </li>
-</ol>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            In head:
-        </p>
-    </li>
-</ul>
-<p dir="ltr">
-    &lt;head&gt;
-</p>
-<p dir="ltr">
-    &lt;script&gt;
-</p>
-<p dir="ltr">
-    function myFunction() { … }
-</p>
-<p dir="ltr">
-    &lt;/script&gt;
-</p>
-<p dir="ltr">
-    &lt;/head&gt;
-</p>
-<br/>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            In Body:
-        </p>
-    </li>
-</ul>
-<p dir="ltr">
+        <li>
+            <p>
+                In fact, it is the default scripting language of HTML.
+            </p>
+        </li>
+    </ul>
+    </div>
+
+    <div class="section">
+    <h2>
+        Before we continue, Java != JavaScript
+    </h2>
+    <p>
+        Since you are familiar with Java, this is worth mentioning. JavaScript was not designed to be a relative of Java. They just share a similar name. JS is
+        object oriented like Java and shares some similar concepts however, as you will see, there are some key differences that set them apart.
+    </p>
+    </div>
+
+    <div class="section">
+    <h2>
+        How to include in HTML
+    </h2>
+    <p>
+        Here are a few ways to include JavaScript in your HTML to begin using it:
+    </p>
+    <ol>
+        <li>
+            Explicitly
+        </li>
+    <ul>
+        <li>
+                In Head:
+        </li>
+    <pre><code>
+        &lt;head&gt;
+        &lt;script&gt;
+        function myFunction() { … }
+        &lt;/script&gt;
+        &lt;/head&gt;
+    </code></pre>
+    <li>
+                In Body:
+        </li>
+    <pre><code>
     &lt;body&gt;
-</p>
-<p dir="ltr">
     &lt;script&gt;
-</p>
-<p dir="ltr">
     function myFunction() { … }
-</p>
-<p dir="ltr">
     &lt;/script&gt;
-</p>
-<p dir="ltr">
     &lt;/body&gt;
-</p>
-<ol start="2">
-    <li dir="ltr">
-        <p dir="ltr">
+    </code></pre>
+    </ul>
+
+    <li>
+        <p>
             Linked
         </p>
     </li>
-</ol>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            If you want to place your Scripts in an external file:
-        </p>
-    </li>
-</ul>
-<p dir="ltr">
-    &lt;script src="myScript.js"&gt;&lt;/script&gt;
-</p>
-<br/>
-<p dir="ltr">
-    It is recommended that you include your HTML at the end of the body so that the HTML can load first.
-</p><br />
-<h1 dir="ltr">
-    Some things you should be familiar with
-</h1>
-<br/>
-<p dir="ltr">
-    Most of the syntax, operators and statements of JavaScript will be familiar to you and behave as you would expect.
-</p>
-<br/>
-<p dir="ltr">
-    Syntax:
-</p>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            Statement separator ;
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            Statement blocks {…}
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            Parentheses in expressions (…)
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            Single line comments //
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            Multi-line comments /*…*/
-        </p>
-    </li>
-</ul>
-<p dir="ltr">
-    Operators:
-</p>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            Arithmetic
-        </p>
-    </li>
     <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                +, -, *, /, %
+        <li>
+            <p>
+                If you want to place your Scripts in an external file:
             </p>
+        </li>
+         <pre><code>  &lt;script src="myScript.js"&gt;&lt;/script&gt; </code></pre>
+    </ul>
+
+    </ol>
+    <p>
+        It is recommended that you include your HTML at the end of the body so that the HTML can load first.
+    </p>
+    </div>
+
+    <div class="section">
+    <h2>
+        Some things you should be familiar with
+    </h2>
+    <p>
+        Most of the syntax, operators and statements of JavaScript will be familiar to you and behave as you would expect.
+    </p>
+    <p>
+        <h3>Syntax:</h3>
+    </p>
+    <ul>
+        <li>
+                Statement separator ;
+        </li>
+        <li>
+                Statement blocks {…}
+        </li>
+        <li>
+                Parentheses in expressions (…)
+        </li>
+        <li>
+                Single line comments //
+        </li>
+        <li>
+                Multi-line comments /*…*/
         </li>
     </ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            Relational
-        </p>
-    </li>
+    <p>
+        <h3>Operators:</h3>
+    </p>
     <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                &lt; &gt;, &lt;=, &gt;=
-            </p>
+        <li>
+                Arithmetic
         </li>
-        <li dir="ltr">
-            <p dir="ltr">
-                ==, !=
-            </p>
+        <ul>
+            <li>
+                    +, -, *, /, %
+            </li>
+        </ul>
+        <li>
+                Relational
         </li>
+        <ul>
+            <li>
+                    &lt; &gt;, &lt;=, &gt;=
+            </li>
+            <li>
+                    ==, !=
+            </li>
+        </ul>
     </ul>
-</ul>
-<p dir="ltr">
-    Statements:
-</p>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            Assignment
-        </p>
-    </li>
+    <p>
+        <h3>Statements:</h3>
+    </p>
     <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                =
-            </p>
+        <li>
+                Assignment
         </li>
-        <li dir="ltr">
-            <p dir="ltr">
-                +=, -=, *=, /=, %=
-            </p>
+        <ul>
+            <li>
+                    =
+            </li>
+            <li>
+                
+                    +=, -=, *=, /=, %=
+                
+            </li>
+            <li>
+                
+                    ++, --
+                
+            </li>
+        </ul>
+        <li>
+        
+                Conditionals
         </li>
-        <li dir="ltr">
-            <p dir="ltr">
-                ++, --
-            </p>
+        <ul>
+            <li>
+                
+                    if (), if() … else
+                
+            </li>
+            <li>
+                
+                    switch (c) case 'a': … case 'b': … default;
+                
+            </li>
+        </ul>
+        <li>
+            
+                Iteration
         </li>
+        <ul>
+            <li>
+
+                    while (), do…while()
+                
+            </li>
+            <li>
+                
+                    for ( ; ; )
+                
+            </li>
+            <li>
+                
+                    break, continue
+                
+            </li>
+        </ul>
     </ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            Conditionals
-        </p>
-    </li>
-    <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                if (), if() … else
-            </p>
-        </li>
-        <li dir="ltr">
-            <p dir="ltr">
-                switch (c) case 'a': … case 'b': … default;
-            </p>
-        </li>
-    </ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            Iteration
-        </p>
-    </li>
-    <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                while (), do…while()
-            </p>
-        </li>
-        <li dir="ltr">
-            <p dir="ltr">
-                for ( ; ; )
-            </p>
-        </li>
-        <li dir="ltr">
-            <p dir="ltr">
-                break, continue
-            </p>
-        </li>
-    </ul>
-</ul>
-</div>
-<div class="section">
-<h1 dir="ltr">
-    Some new ideas
-</h1><br />
-<h2 dir="ltr">
-    Dynamic types
-</h2><br />
-<p dir="ltr">
-    In Java:
-</p>
-<p dir="ltr">
+    </div>
+
+    
+    <h2>
+        Some new ideas
+    </h2>
+    <div class="section">
+    <h2>
+        Dynamic types
+    </h2>
+    <h3>
+        In Java:
+    </h3>
+    <pre><code>
     int a = 5; // a is an Integer
-</p>
-<p dir="ltr">
     a = “hello” // Error!
-</p>
-<p dir="ltr">
-    In JS:
-</p>
-<p dir="ltr">
+    </code></pre>
+    <h3>
+        In JS:
+    </h3>
+    <pre><code>
     var a; // a is undefined
-</p>
-<p dir="ltr">
     a = “hello” // No error, a is now a string!
-</p>
-<p dir="ltr">
     a = 5; // a is now a number
-</p>
-<p dir="ltr">
     a = false; // a is now a boolean
-</p>
-<br/>
-<p dir="ltr">
-    The above example shows the difference between Java which is statically typed and JavaScript which is dynamically typed. The type of our variables can
-    change at runtime and they will be the type of the last value we give them. This means that the same variable can be used as different types.
-</p>
-<p dir="ltr">
-    In Javascript you don’t need to specify the type of a variable when declaring it. Simply use the keyword “var”:
-</p>
-<br/>
-<p dir="ltr">
+</code></pre>
+    <p>
+        The above example shows the difference between Java which is statically typed and JavaScript which is dynamically typed. The type of our variables can
+        change at runtime and they will be the type of the last value we give them. This means that the same variable can be used as different types.
+    </p>
+    <p>
+        In Javascript you don’t need to specify the type of a variable when declaring it. Simply use the keyword “var”:
+    </p>
+    <pre><code>
     var a = 5;
-</p>
-<p dir="ltr">
     var b = true;
-</p>
-<p dir="ltr">
     var x = “hi”;
-</p>
-<br/>
-<h2 dir="ltr">
-    Objects
-</h2>
-<br/>
-<p dir="ltr">
-    We can create objects within our script in a way that is similar to Java. We must include the term var before an object we create. The following are the
-    types of objects we can create:
-</p>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            undefined
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            boolean
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            number
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            string
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            symbol
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            host object
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            function object
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            null
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            object object (any other object)
-        </p>
-    </li>
+    </code></pre>
+   </div>
+
+    <div class="section">
+    <h2>
+        Objects
+    </h2>
+    <p>
+        We can create objects within our script in a way that is similar to Java. We must include the term var before an object we create. The following are the
+        types of objects we can create:
+    </p>
     <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                Ex.
-            </p>
+        <li>
+                undefined
         </li>
+        <li>
+    
+                boolean
+            
+        </li>
+        <li>
+            
+                number
+            
+        </li>
+        <li>
+            
+                string
+            
+        </li>
+        <li>
+            
+                symbol
+            
+        </li>
+        <li>
+            
+                host object
+            
+        </li>
+        <li>
+            
+                function object
+            
+        </li>
+        <li>
+            
+                null
+            
+        </li>
+        <li>
+            
+                object object (any other object)
+            
+        </li>
+        <ul>
+            <li>
+                
+                    Ex.
+            
+            </li>
+        </ul>
     </ul>
-</ul>
-<p dir="ltr">
+    <pre><code>
     var num = 45;
-</p>
-<p dir="ltr">
     var name = “joe”;
-</p>
-<p dir="ltr">
     var obj = new Object();
-</p>
-<p dir="ltr">
-    In this example, we have created three types of objects. First we create a number object, then a string object, and last an object object.
-</p>
-<br/>
-<h2 dir="ltr">
-    Functions
-</h2>
-<br/>
-<ul>
-    <li dir="ltr">
-        <p dir="ltr">
-            These are used to perform different tasks within your code.
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            Though functions can be used the same way as Java, in JavaScript, functions are themselves a type of object.
-        </p>
-    </li>
-    <li dir="ltr">
-        <p dir="ltr">
-            Functions are used when another part of your script invokes them. This can be from an event (see section below), invoked by another part of your
-            script, and they can be invoked automatically.
-        </p>
-    </li>
+    </code></pre>   
+    <p>
+        In this example, we have created three types of objects. First we create a number object, then a string object, and last an object object.
+    </p>
+    </div>
+
+     <div class="section">
+    <h2>
+        Functions
+    </h2>
     <ul>
-        <li dir="ltr">
-            <p dir="ltr">
-                Ex.
+        <li>
+            
+                These are used to perform different tasks within your code.
+        
+        </li>
+        <li>
+            <p>
+                Though functions can be used the same way as Java, in JavaScript, functions are themselves a type of object.
             </p>
         </li>
+        <li>
+            <p>
+                Functions are used when another part of your script invokes them. This can be from an event (see section below), invoked by another part of your
+                script, and they can be invoked automatically.
+            </p>
+        </li>
+        <ul>
+            <li>
+            
+                    Ex.
+                
+            </li>
+        </ul>
     </ul>
-</ul>
-<p dir="ltr">
-    function functionName (parameter) {
-</p>
-<p dir="ltr">
-    return parameter
-</p>
-<p dir="ltr">
-    }
-</p>
-<p dir="ltr">
+    <pre><code>
+        function functionName (parameter) {
+    
+        return parameter
+        }
+        
     //Invoke the function through the function object.
-</p>
-<p dir="ltr">
+</code></pre>
+<p>
+
     functionName(inputValue);
 </p>
-<p dir="ltr">
+<p>
     In this example, the function, functionName, takes a value, parameter, and returns that same value. When we invoke our function object, we will return the
     same value that we pass in, inputValue.
 </p>
-<br />
-<h2 dir="ltr">
+</div>
+ <div class="section">
+<h2>
     Methods
 </h2>
 <br />
 <ul>
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <p>
             Methods can be considered a property of an object that correspond to a function. Each of the object types mentioned above have predefined methods,
             but you can place your own function within an object to be used as a method.
         </p>
     </li>
     <ul>
-        <li dir="ltr">
-            <p dir="ltr">
+        <li>
+            <p>
                 Ex. Predefined method:
             </p>
         </li>
     </ul>
 </ul>
-<p dir="ltr">
+
+<pre><code>
     var name = “joe”
-</p>
-<p dir="ltr">
-    var capitalizedName = name.toUpperCase(); //capitalizedName is initialized to “JOE”
-</p>
-<p dir="ltr">
+    var capitalizedName = name.toUpperCase(); //capitalizedName is initialized to “JOE” 
+</code></pre>
+
+<p>
     In this example, we first create a string object, name, and then we create another string object, capitalizedName. When we initialize the value of our
     second string object we are using the native method “toUpperCase” which takes the value of the first string object and returns the same value in all
     capital letters.
 </p>
 <ul>
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <p>
             Ex. Adding your own method:
         </p>
     </li>
 </ul>
-<p dir="ltr">
+<pre><code>
     var yourObject = new Object();
-</p>
-<p dir="ltr">
     function yourFunction() {
-</p>
-<p dir="ltr">
     return “hello world”
-</p>
-<p dir="ltr">
     }
-</p>
-<p dir="ltr">
+
     yourObject.nameForMethod = yourFunction;
-</p>
-<p dir="ltr">
     //And to invoke this method which uses yourFunction:
-</p>
-<p dir="ltr">
     yourObject.nameForMethod();
-</p>
-<br />
-<h2 dir="ltr">
+</code></pre>
+</div>
+
+ <div class="section">
+<h2>
     The DOM
 </h2>
-<br />
-<p dir="ltr">
+<p>
     When loading a page, the browser creates the Document Object Model (DOM) of the page for us. This essentially means, your browser takes your HTML and
     constructs a tree of nodes from it. Each node being an element of your HTML, and each node holds a reference to its parent node and all of its child nodes.
 </p>
-<p dir="ltr">
+<p>
     The DOM provides JavaScript the power to access any and all elements in your HTML as objects, so that you can do things like get, update or delete any HTML
     and CSS that you would like.
 </p>
-<p dir="ltr">
+<p>
     For example, here's some JavaScript code we’ve placed in the body of our HTML:
 </p>
 <br/>
-<p dir="ltr">
+<h3>
     Code:
-</p>
-<p dir="ltr">
+</h3>
+<pre><code>
     &lt;h1&gt;Changing the DOM&lt;/h1&gt;
-</p>
-<br/>
-<p dir="ltr">
     &lt;p id="demo"&gt;&lt;/p&gt;
-</p>
-<br/>
-<p dir="ltr">
     &lt;script&gt;
-</p>
-<p dir="ltr">
     document.getElementById("demo").innerHTML = "Change on Load";
-</p>
-<p dir="ltr">
     &lt;/script&gt;
-</p>
-<br/>
-<p dir="ltr">
+    </code></pre>
+<h3>
     Result:
-</p>
-<p dir="ltr">
+</h3>
+<p>
     <img
-        src="https://lh4.googleusercontent.com/fDhrXm8eVmCulUaGaSdcw5EmtyTaeSPV91pJBoJJscvQgoS93eUZsL8-IABugAVwGlqR3LAU19cK-7biGhKFQKBew3TmS2SvwxC3i_sdoLqt27F4WLIkMtdJG8pjNpZmWgqFjFo"
-        width="296px;"
-        height="150px;"
+    src="https://lh4.googleusercontent.com/fDhrXm8eVmCulUaGaSdcw5EmtyTaeSPV91pJBoJJscvQgoS93eUZsL8-IABugAVwGlqR3LAU19cK-7biGhKFQKBew3TmS2SvwxC3i_sdoLqt27F4WLIkMtdJG8pjNpZmWgqFjFo"
+    width="296px;"
+    height="150px;"
     />
 </p>
 <br/>
-<p dir="ltr">
+<p>
     Let’s break down the script above to see how it gives us this result.
 </p>
 <ol>
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <h5>
             The document object
-        </p>
+        </h5>
     </li>
 </ol>
-<p dir="ltr">
+<p>
     This is the owner of all the objects of your HTML. Start with the document object when you want to change any of the objects in your page.
 </p>
 <ol start="2">
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <h5>
             getElementById()
-        </p>
+        </h5>
     </li>
 </ol>
-<p dir="ltr">
+<p>
     This is one of the several methods of the document object that we can use to find a specific node we want to access. In the example above we get the
     element with id “demo” which is the empty paragraph element.
 </p>
 <ol start="3">
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <h5>
             innerHTML
-        </p>
+        </h5>
     </li>
 </ol>
-<p dir="ltr">
+<p>
     This is a property of every node in our tree that can be accessed to change the contents of an element. We see above that the paragraphs contents are
     initially empty and when the page loads, the script is run and the paragraph’s content is filled with “Change on Load”.
 </p>
 <br/>
-<p dir="ltr">
+<p>
     Note that you want to put some thought into what id’s you give to your elements so that it is easy to access what you want.
 </p>
 <br/>
-<p dir="ltr">
+<p>
     Some other useful document methods:
 </p>
 <ol>
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <h5>
             getElementsByTagName(“t”)
-        </p>
+        </h5>
     </li>
 </ol>
-<p dir="ltr">
+<p>
     returns an array of elements that have tag name “t”
 </p>
 <ol start="2">
-    <li dir="ltr">
-        <p dir="ltr">
+    <li>
+        <h5>
             getELementsByClassName(“c”)
-        </p>
+        </h5>
     </li>
 </ol>
-<p dir="ltr">
+<p>
     returns an array of elements that have clase name “c”
 </p>
-</div>
-<div class="section">
-<h2 dir="ltr">
+<br/>
+<h2>
     What if we want events to drive our changes?
-</h2><br />
-<p dir="ltr">
+</h2>
+<p>
     Instead of the script changing our contents when the page is loaded, we want to wait until the user triggers some event (clicks on button) to change the
     contents of our HTML.
 </p>
-<p dir="ltr">
+<p>
     Well we can do that. Here is some code we’ve placed in our HTML:
-</p><br />
-<p dir="ltr">
+</p>
+<p>
+    <h3>
     Code:
+    </h3>
 </p>
-<br/>
-<p dir="ltr">
+ <pre><code>
     &lt;p&gt;Using the addEventListener() method&lt;/p&gt;
-</p>
-<br/>
-<p dir="ltr">
     &lt;button id="button"&gt;Try it&lt;/button&gt;
-</p>
-<br/>
-<p dir="ltr">
     &lt;p id="demo"&gt;&lt;/p&gt;
-</p>
-<br/>
-<p dir="ltr">
     &lt;script&gt;
-</p>
-<p dir="ltr">
     document.getElementById("button").addEventListener("click", displayAfterClick);
-</p>
-<br/>
-<p dir="ltr">
     function displayAfterClick() {
-</p>
-<p dir="ltr">
     document.getElementById("demo").innerHTML = "After Click";
-</p>
-<p dir="ltr">
     }
-</p>
-<p dir="ltr">
     &lt;/script&gt;
-</p>
-<br/>
-<p dir="ltr">
+    </code></pre>
+
+
+<h3>
     Results:
-</p>
-<br/>
-<p dir="ltr">
+    </h3>
+<h4>
     Before Click:
-</p>
-<br/>
-<p dir="ltr">
+</h4>
+<p>
     <img
-        src="https://lh5.googleusercontent.com/FGUeGA_Gv9NTXCXYBsK8hwes8cDpawImT8OQ4ko10rKC3T3s4njWnNIbftuPu-6L9RguzLXtjZf5uJ9MpRWPrGQcXF8PQnnqhDyTVxMh4fbQ-4xMPnYbNPvLFALalw549uNpHiM"
-        width="416px;"
-        height="100px;"
+    src="https://lh5.googleusercontent.com/FGUeGA_Gv9NTXCXYBsK8hwes8cDpawImT8OQ4ko10rKC3T3s4njWnNIbftuPu-6L9RguzLXtjZf5uJ9MpRWPrGQcXF8PQnnqhDyTVxMh4fbQ-4xMPnYbNPvLFALalw549uNpHiM"
+    width="416px;"
+    height="100px;"
     />
 </p>
-<br/>
-<p dir="ltr">
+<h4>
     After Click:
-</p>
-<br/>
-<p dir="ltr">
+</h4>
+
+<p>
     <img
-        src="https://lh5.googleusercontent.com/NEY4OONjDqZRQCh6INZ4O4RizWB28hU29BToOd6wSXzC1hSmTQhsbNH9CgdWaytD9HfP6WpLdyQd61-oxhF9A6eLMGiSgwemX_VEo64mFF39eNwbNNBke8zKnyB7sTSZ7zv9wto"
-        width="418px;"
-        height="132px;"
+    src="https://lh5.googleusercontent.com/NEY4OONjDqZRQCh6INZ4O4RizWB28hU29BToOd6wSXzC1hSmTQhsbNH9CgdWaytD9HfP6WpLdyQd61-oxhF9A6eLMGiSgwemX_VEo64mFF39eNwbNNBke8zKnyB7sTSZ7zv9wto"
+    width="418px;"
+    height="132px;"
     />
 </p>
-<br/>
-<p dir="ltr">
+<h3>
     What’s new?
-</p><br />
-<p dir="ltr">
+</h3>
+<p>
     You can see we’re using a familiar method getElementById to access the button. What’s new is the addEventListener() method. This is used to do what it
     says, add an event listener to an element. We assign it with parameters “click”, to mean, when the button is clicked, and displayAfterClick which is the
     function we want executed when the button is clicked.
 </p>
-<p dir="ltr">
+<p>
     Now, when the button is clicked the displayAfterClick() method is called, which simply replaces the contents of the empty paragraph with “After Click”.
 </p>
 </div>
