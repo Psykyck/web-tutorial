@@ -23,7 +23,58 @@ A typical webpage depends on several technologies to control what the end-user s
 		<p>
             HTML is a markup language. The word markup was used by editors who marked up manuscripts (usually with a blue pencil) when giving instructions for revisions. "Markup" now means something slightly different: a language with specific syntax that instructs a Web browser how to display a page. Once again, HTML separates "content" (words, images, audio, video, and so on) from "presentation" (instructions for displaying each type of content). HTML uses a pre-defined set of elements to define content types. Elements contain one or more "tags" that contain or express content. Tags are enclosed by angle brackets, and the closing tag begins with a forward slash.
 The paragraph element consists of the start tag "&lt;p&gt;" and the closing tag "&lt;/p&gt;" The following example shows a paragraph contained within the HTML paragraph element. Remember that your browser will not display more than one space character in a row.
+
+<img
+    src="https://lh6.googleusercontent.com/FW64cMKxdUUlMfOChRZnLtmAf-8G427MQTXBr_XSIc1ZZctfgAfROAT73aFwIwjP6X5NV_mAeOepJ6fVG8imDm53o-OCLC4dlkGHD86xZ0AjM_viKjdlneJzS8qpxETr9xVw2_E"
+    width="269px;"
+    height="40px;"
+/>"
+
+<p dir="ltr">
+        When this content is displayed in a web browser, it looks like this:
+    </p>
+    <p dir="ltr">
+        <img
+            src="https://lh6.googleusercontent.com/dt63cgwGkgd2IWeOHRphCjg4FC53XGSuxVASfbHyvncnXOhif3yjir4SYIY7SVHtkdMWDz_bxZdjdaF7Xt32PUC6qI6Rnd7e52O8nNlg6QPeW6tp5QxCnFIth5wNMT19HxkZLpU"
+            width="201px;"
+            height="50px;"
+        />
+    </p>
+    <p dir="ltr">
+        The browser uses tags as an indicator of how to display the content in the tags.
+    </p>
+    <p dir="ltr">
+        Usually elements containing content can also contain other elements. For example, the emphasis element ("&lt;em&gt;") can be embedded within a
+        paragraph element, to add emphasis to a word or phrase:
+    </p>
+    <p dir="ltr">
+        <img
+            src="https://lh3.googleusercontent.com/nw6ON2VZiu6dxD-aElDVrm5AnAlD3_lQ2O1sRahEl6znDoOFeZErfKg0TTN1owrWlzABc1pSS6Ba4z9iPomUaWi_W71zKaiULd43HMR0SQOyt84IxgE1vUpS5WQU4hiE0bV_Jog"
+            width="309px;"
+            height="42px;"
+        />
+    </p>
+    <p dir="ltr">
+        When displayed, this looks like:
+    </p>
+    <p dir="ltr">
+        <img
+            src="https://lh6.googleusercontent.com/s85UNhDD8Z7FmYjktwBua3Nh5bZTGBm4xsztwn2uf3pdPCxsotswDGscs9TpWpUpt23oelJYEOq6sENCZ2lcXacnM5BiPAeUhh-m8KkhzGnt8OapCQjOo9VP0EireEu0M_nEZT0"
+            width="206px;"
+            height="44px;"
+        />
+    </p>
+    <p >
+Some elements cannot contain other elements. For example, the imagetag ("&lt;img&gt;") specifies the filename of the content (an image) as an attribute:
 </p>
+  <img
+        src="https://lh4.googleusercontent.com/NjuWtYG7yGNY-yG8bt8_nLUX38LBIl2AJ1UcQDQFRMZBd-faTM7ZpuDd6mwN5B4rCEkzGhVsEncCMMb4rbWG7rfQbpOA5FVo2Ix7LP7B114VXB3kaTs3MPQE3KtWuQyzpaN3FlU"
+        width="317px;"
+        height="34px;"
+    />
+
+
+    
         </div>
 
         <div class="section">
@@ -35,12 +86,27 @@ HTML elements are written with a start tag, with an end tag, with the content in
 &lt;tagname&gt;content&lt;/tagname&gt;
 </code></pre>
  
-Here is a simple example:
-
-HTML elements can be nested (elements can contain elements).
-This example contains 3 HTML elements:
-
-
+<p dir="ltr">
+    Here is a simple example:
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh3.googleusercontent.com/lXHN-yiCT7kJdbzZj_CZPY512JC_sQqLrez2qlFrBpC6u4ncmbBNFXsMw2CjVdjn80jVKPnxV9XPMQMXk4cpqfFxD9JXZRNPdIpfrHmvv8KTWN45u8YRxVTVD_-zJ1z4k7kY_Q0"
+        width="279px;"
+        height="42px;"
+    />
+</p>
+<p dir="ltr">
+    HTML elements can be nested (elements can contain elements).
+</p>
+<p dir="ltr">
+    This example contains 3 HTML elements:
+</p>
+<img
+    src="https://lh3.googleusercontent.com/gFri7IuPzI95NLInXc0ZDb9RGoMwX4JuqTwtxbc820o7X3P_2ecz8St3wIGQPjPeDBomBNMntwbuzYiHyLDQT8ZHPZzKFBLhq2e62ysoBBTyrVVPuA1H8-PO3-mj63p5KA5iU7w"
+    width="206px;"
+    height="63px;"
+/>
 </p>
         </div>
 
@@ -51,9 +117,12 @@ This example contains 3 HTML elements:
 An attribute name
 An attribute value
 Attribute values that consist of a single word or number may be written as they are, but you must enclose values containing spaces in quotation marks (either single (') or double (") quotes). Many developers always use quotes to avoid mistakes like this:
-
-
 </p>
+<img
+    src="https://lh4.googleusercontent.com/m1s0cj33ktW-fvxqqPkIG7y-PGvSmOSszvwt1LM6UyP20GgyYGAtskIfRXQ3wqd0-p9l4nu66exLleYc8VtWhW-7jZhbJeze0hNLbxqcJRL02cLyqz8nY5PhEPbrn4rf2IRGHv4"
+    width="606px;"
+    height="32px;"
+/>
         </div>
 
 
@@ -61,10 +130,22 @@ Attribute values that consist of a single word or number may be written as they 
 		<h2>Comments and doctype</h2>
 		<p>
            HTML has a mechanism for embedding comments that are not displayed when the page is rendered in a browser. This is useful for explaining a section of markup, leaving notes for other people who might work on the page, or for leaving reminders for yourself. HTML comments are enclosed in symbols as follows:
+           </p>
+           <img
+    src="https://lh3.googleusercontent.com/7qQw9cK-Fjh70ONJI4jTVJbe7KgelC4T7L6YKVAdrTOp5lryE-7Qi6f4vCVpjUWdJiA_bVBPJEwqOJKt7c23k8vi8iarCgJ9EZ7ITlkG8IIEI_4nyAkoC9RCKxg8qHtLdLCnoYU"
+    width="218px;"
+    height="35px;"
+/>
 
+<p>
 Besides tags, text content, and entities, an HTML document must contain a doctype declaration as the first line. The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.
 In HTML5, there is only one declaration and is written like this:
-
+</p>
+  <img
+        src="https://lh4.googleusercontent.com/Dnuf9Y-PnsG11x_aQjOxTIIkn2VwmXHyKbD5bXOajwTXEk1N5EWw5W8g6BodewfFdDjH8F1S-YF8MjE4wjGu30UUr7zOGZ8HXS974T_w7B2XEosleyIZwNTSex7QyBOZtrJ0_Mg"
+        width="180px;"
+        height="35px;"
+    />
 </p>
         </div>
 
@@ -73,8 +154,16 @@ In HTML5, there is only one declaration and is written like this:
 		<h2>A simple example<h2>
 		<p>
 
-
+			    <img
+        src="https://lh6.googleusercontent.com/zJc2DPBuD88Kbg662thB0OHvc_ZbEDs3wPPyjBCFqY2TGbKZM4A23FiZhqf8gALvlMvmBKMqT0dSA4H6Y0alXvtwm-iuODsSl4E8sW7THcbYCd5vTRKkmg2w0fBVEI07y9_cis8"
+        width="351px;"
+        height="106px;"
+    />
 </p>
         </div>
+
+        
+		<a href="CSStutorial.html" class="link">Continue to the CSS Tutorial</a></li>
+			
 
         
