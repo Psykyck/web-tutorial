@@ -1,0 +1,192 @@
+---
+title: CSS Tutorial
+---
+<h1>CSS Tutorial</h1>
+<div class="section">
+		<h2>Introduction</h2>
+		<p>
+            This tutorial is designed for those you are comfortable with HTML. CSS is the stylesheet language that you style the webpage built by HTML. CSS is really easy to learn and use. Like HTML, you can write it using a simple text editor application, and you don't need more than that. It makes web development a whole lot easier. Rather than having to make design details one at a time, for single element on every page, you can set up all your design features, and make any changes, in one style sheet.
+</p>
+        </div>
+
+        <div class="section">
+		<h2>A brief History.</h2>
+		<p>
+            CSS is a really helpful and effective way of formatting your HTML pages for the web. In the early days of the internet, HTML was enough to do everything you wanted. HTML lets you do a lot, structurally. It's great for describing content, putting together links, tables, headings and images.
+As the internet grew bigger, HTML was becoming more and more complex. The increasing amount of content meant cleaner, more efficient formatting was needed. Having a clear structure would help to organize pages, maintenance of websites and improve accessibility.
+The World Wide Web Consortium (W3C) developed CSS as a response to this, and it has a lot of benefits:
+<ul>
+    <li >
+        You have more control over the appearance of your documents
+    </li>
+    <li >
+        You can choose different colours for text and backgrounds
+    </li>
+    <li >
+        Set up borders around any element and adjusting the spaces around them
+    </li>
+    <li >
+        Change how your text is presented –choose specific fonts or decorate text in different ways
+    </li>
+    <li >
+        In short - HTML can be used to format the content of your webpage, and CSS can format its appearance
+    </li>
+</ul>
+        </div>
+
+
+        <div class="section">
+		<h2>What is CSS?</h2>
+		<p>
+            Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. While most often used to change the style of a web pages and user interfaces written in HTML and XHTML, the language can be applied to any kind of XML document. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+Styles don’t smell or taste anything like HTML, they have a format of ‘property: value’ and most properties can be applied to most HTML tags.
+</p>
+        </div>
+
+         <div class="section">
+		<h2>Applying CSS to HTML</h2>
+		<p>
+            There are three ways to apply CSS to HTML: In-line, internal, and external.
+In-line
+In-line styles are plonked straight into the HTML tags using the style attrubate.
+
+This will make that specific paragraph red.
+But, if you remember, the best-practice approach is that the HTML should be a stand-alone, presentation free document, and so in-line styles should be avoided wherever possible.
+Internal
+Embedded, or internal, styles are used for the whole page. Inside the head element, the style tags surround all of the styles for the page.
+
+This will make all of the paragraphs in the page red and all of the links blue.
+Although preferable to soiling our HTML with inline presentation, it is similarly usually preferable to keep the HTML and the CSS files separate.
+External
+External styles are used for the whole, multiple-page website. This is a separate CSS file, which will simply look something like:
+image
+If this file is saved as “style.css” in the same directory as your HTML page then it can be linked to the HTML like this:
+
+</p>
+        </div>
+
+        <div class="section">
+		<h2>Selectors, Properties and Values</h2>
+		<p>
+            Whereas HTML has tags, CSS has selectors. Selectors are the names given to styles in internal and external style sheets. We are going to focus on HTML selectors, which are simply the names of HTML tags and are used to change the style of a specific type of element.
+For each selector there are “properties” inside curly brackets, which simply take the form of words such ascolor, font-weight or background-color.
+A value is given to the property following a colon (NOT an “equals” sign) and semi-colons separate the properties.
+
+<pre><code>
+body {
+    font-size: 14px;
+    color: navy;
+}
+</code></pre>
+
+
+This will apply the given values to the font-size andcolor properties to the body selector.
+So basically, when this is applied to an HTML document, text between the body tags (which is the content of the whole window) will be 14 pixels in size and navy in color.
+
+
+<h4>Lengths and Percentages</h4>
+There are many property-specific units for values used in CSS, but there are some general units that are used by a number of properties and it is worth familiarizing yourself with these before continuing.
+<ul>
+    <li>
+            px (such as font-size: 12px) is the unit for pixels.
+    </li>
+    <li>
+            em (such as font-size: 2em) is the unit for the calculated size of a font. So “2em”, for example, is two times the current font size.
+    </li>
+    <li>
+            pt (such as font-size: 12pt) is the unit for points, for measurements typically in printed media.
+
+    </li>
+    <li>
+            % (such as width: 80%) is the unit for… wait for it… percentages.
+
+    </li>
+</ul>
+Other units include pc (picas), cm (centimeters), mm (millimeters) and in (inches).
+When a value is zero, you do not need to state a unit. For example, if you wanted to specify no border, it would be border: 0.
+
+
+</p>
+        </div>
+
+        <div class="section">
+		<h2>Colors</h2>
+		<p>
+            CSS brings 16,777,216 colors to your disposal. They can take the form of a name, an RGB, or a hex code.
+The following values, to specify full-on as red-as-red-can-be, all produce the same result:
+<ul>
+    <li>
+        
+            red
+       
+    </li>
+    <li >
+        
+            rgb(255,0,0)
+       
+    </li>
+    <li >
+        
+            rgb(100%,0%,0%)
+       
+    </li>
+    <li> 
+        
+            #ff0000
+        
+    </li>
+    <li >
+        
+            #f00
+        </p>
+    </li>
+</ul>
+Predefined color names include aqua, black, blue,fuchsia, gray, green, lime, maroon, navy, olive, orange,purple, red, silver, teal, white, and yellow.transparent is also a valid value.
+With the possible exception of black and white, color names have limited use in a modern, well-designed web sites because they are so specific and limiting.
+The three values in the RGB value are from 0 to 255, 0 being the lowest level (no red, for example), 255 being the highest level (full red, for example). These values can also be a percentage.
+Hexadecimal (previously and more accurately known as “sexadecimal”) is a base-16 number system. We are generally used to the decimal number system (base-10, from 0 to 9), but hexadecimal has 16 digits, from 0 to f.
+The hex number is prefixed with a hash character (#) and can be three or six digits in length. Basically, the three-digit version is a compressed version of the six-digit (#ff0000 becomes #f00, #cc9966 becomes#c96, etc.). The three-digit version is easier to decipher (the first digit, like the first value in RGB, is red, the second green and the third blue) but the six-digit version gives you more control over the exact color.
+Sample code:
+
+
+</p>
+        </div>
+
+
+
+                <div class="section">
+		<h2>Text</h2>
+		<p>
+           
+			You can alter the size and shape of the text on a web page with a range of properties, such as font type, font size, font weight, font-style, font-decoration, and text-transform.
+
+			Sample code:
+
+</p>
+        </div>
+
+                        <div class="section">
+		<h2>Margins, Padding and Borders</h2>
+		<p>
+           
+			Margin and padding are the two most commonly used properties for spacing-out elements. A margin is the space outside something whereas padding is the space inside something. Borders can be applied to most HTML to most HTML elements within the body.
+
+The Box Model
+Margins, padding and borders are all part of what’s known as the Box Model. The Box Model works like this: in the middle you have the content area (let’s say an image), surrounding that you have the padding, surrounding that you have the border and surrounding that you have the margin. It can be visually represented like this:
+image
+</p>
+        </div>
+
+                                <div class="section">
+		<h2>A Simple example</h2>
+		<p>
+           
+			Margin and padding are the two most commonly used properties for spacing-out elements. A margin is the space outside something whereas padding is the space inside something. Borders can be applied to most HTML to most HTML elements within the body.
+
+The Box Model
+Margins, padding and borders are all part of what’s known as the Box Model. The Box Model works like this: in the middle you have the content area (let’s say an image), surrounding that you have the padding, surrounding that you have the border and surrounding that you have the margin. It can be visually represented like this:
+image
+</p>
+        </div>
+
+        
