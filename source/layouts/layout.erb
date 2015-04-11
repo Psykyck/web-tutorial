@@ -9,12 +9,13 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Web Tutorial" %></title>
     
-    <link href="stylesheets/normalize.css" rel="stylesheet" type="text/css" relative="true" /><link href="stylesheets/monokai_sublime.css" rel="stylesheet" type="text/css" relative="true" /><link href="stylesheets/ruby.css" rel="stylesheet" type="text/css" relative="true" />
+    <link href="stylesheets/normalize.css" rel="stylesheet" type="text/css" relative="true" /><link href="stylesheets/monokai_sublime.css" rel="stylesheet" type="text/css" relative="true" /><link href="stylesheets/ruby.css" rel="stylesheet" type="text/css" relative="true" /><link href="stylesheets/layout.css" rel="stylesheet" type="text/css" relative="true" />
     <script src="javascripts/highlight.js" type="text/javascript" relative="true"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   
   <body class="content">
+    <%= partial "/layouts/partials/navbar" %>
     <%= yield %>
   </body>
 </html>
