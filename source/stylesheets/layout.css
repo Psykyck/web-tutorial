@@ -1,0 +1,129 @@
+
+ 
+ .clear:after{
+     content:".";
+     display:block;
+     height:0;
+     clear:both;
+     visibility:hidden;
+     line-height:0;
+}
+ .clear{
+     display:block;
+     width:100%;
+     clear:both;
+}
+ * html .clear{
+     height:1%;
+}
+ a{
+     outline:none;
+     text-decoration:none;
+}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+article, aside, figcaption, figure, footer, header, nav, section{
+     display:block;
+     margin:0;
+     padding:0;
+}
+/* ----------------------------------------------Wrapper-------------------------------------*/
+ div.wrapper{
+     display:block;
+     width:100%;
+     margin:0;
+     padding:0;
+     text-align:left;
+}
+ .row1, .row1 a{
+     color:#FFFFFF;
+     background-color:#8F1001;
+}
+ .row1 .link{
+     padding: 10px;
+}
+ .row1 .link:hover{
+     color:#FFFFFF;
+     background-color:#7e7e7e;
+}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+ #header, #container, #footer{
+     display:block;
+     margin:0 auto;
+     width:960px;
+}
+ #header, #footer{
+     font-size: 20px;
+}
+ nav ul{
+     margin:0;
+     padding:0;
+     list-style:none;
+}
+ .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, h5, h6{
+     margin:0;
+     padding:0;
+     font-size:20px;
+     font-weight:normal;
+     font-style:normal;
+     line-height:normal;
+}
+
+#logos{
+  background-color: white;
+}
+
+#ruby{
+  margin-left: 90px;
+  margin-bottom: 60px;
+  width: 235.8px;
+  height: 207.6px;
+}
+
+#javascript{
+  margin-left: 10px;
+  margin-bottom: 70px;
+}
+
+
+/*----------------------------------------------Header-------------------------------------*/
+ #header{
+}
+ #header #hgroup{
+     float:left;
+     padding:20px 0;
+}
+ #header #hgroup h1{
+     font-size:36px;
+}
+ #header #hgroup h2{
+     font-size:13px;
+}
+ #header nav{
+     float:right;
+     padding:20px 0;
+}
+ #header nav ul{
+     margin-top:10px;
+}
+ #header nav li{
+     display:inline;
+     margin-right:0px;
+     text-transform:uppercase;
+}
+ #header nav li.last{
+     margin-right:0;
+}
+/*----------------------------------------------Content Area-------------------------------------*/
+
+/*----------------------------------------------Footer-------------------------------------*/
+ #footer p{
+     margin:0;
+     padding:20px 0px;
+}
+/*----------------------------------------------ImagesList------------------------------------*/
+ * {
+    margin:0;
+     padding: 0;
+}
